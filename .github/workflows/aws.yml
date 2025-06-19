@@ -63,7 +63,7 @@ jobs:
           echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
           
           
-  Continuous-Deployment:
+    Continuous-Deployment:
     needs: build-and-push-ecr-image
     runs-on: self-hosted
     steps:
@@ -80,25 +80,39 @@ jobs:
       - name: Login to Amazon ECR
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v1
-      
-      - name: Pull latest images
+
+      - name: Pull latest image
         run: |
+          echo "🔄 Pulling latest Docker image..."
           docker pull ${{ secrets.AWS_ECR_LOGIN_URI }}/${{ secrets.ECR_REPOSITORY_NAME }}:latest
 
-      - name: Run Docker Image to serve users
+      - name: Stop and remove old container (if any)
         run: |
+          echo "🧹 Stopping any existing container named mltest"
+          docker rm -f mltest || true
+
+      - name: Run Docker Image
+        run: |
+          echo "🚀 Starting new container"
           docker run -d -p 8080:8080 --ipc="host" --name=mltest \
             -e AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }} \
             -e AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }} \
             -e AWS_REGION=${{ secrets.AWS_REGION }} \
             ${{ secrets.AWS_ECR_LOGIN_URI }}/${{ secrets.ECR_REPOSITORY_NAME }}:latest
 
-      - name: Confirm container is running
+      - name: Verify Container Status
         run: |
-          echo "Checking if container is running..."
-          docker ps | grep mltest && echo "✅ Deployment successful!"
+          echo "🔍 Verifying if 'mltest' container is running..."
+          docker ps -a
+          docker logs mltest || echo "⚠️ No logs found"
 
-      - name: Clean previous images and containers
+      - name: (Optional) Health Check
         run: |
+          echo "🩺 Checking health endpoint..."
+          sleep 10
+          curl -f http://localhost:8080/ || (echo "❌ Health check failed" && exit 1)
+
+      - name: Clean Docker System
+        run: |
+          echo "🧼 Cleaning up unused Docker resources..."
           docker system prune -f
-
