@@ -1,0 +1,20 @@
+[2025-06-17 22:41:38,245] 24 root - INFO - Entered Data Ingestion Method
+[2025-06-17 22:41:38,248] 27 root - INFO - Read dataset as Data frame
+[2025-06-17 22:41:38,252] 33 root - INFO - Train test Split initiated
+[2025-06-17 22:41:38,257] 39 root - INFO - Ingestion of data is completed
+[2025-06-17 22:41:38,259] 64 root - INFO - Read train and test data completed Under Data Transformation
+[2025-06-17 22:41:38,259] 65 root - INFO - Obtaining preprocessing Object
+[2025-06-17 22:41:38,259] 41 root - INFO - Numerical columns scaling completed
+[2025-06-17 22:41:38,260] 42 root - INFO - Categorical columns encoding completed
+[2025-06-17 22:41:38,260] 50 root - INFO - Column transformer object created
+[2025-06-17 22:41:38,260] 79 root - INFO - Applying preprocessing object on training and testing datasets
+[2025-06-17 22:41:38,272] 87 root - INFO - Preprocessing completed
+[2025-06-17 22:41:38,281] 93 root - INFO - Saved preprocessing object
+[2025-06-17 22:41:38,283] 28 root - INFO - Object saved at artifact/preprocessor.pkl
+[2025-06-17 22:41:38,283] 33 root - INFO - Splitting training and testing data
+[2025-06-17 22:41:44,816] 41 root - INFO - Best parameters for RandomForestRegressor: {'n_estimators': 256}
+[2025-06-17 22:41:45,442] 48 root - INFO - RandomForestRegressor: 0.8523075182277664
+[2025-06-17 22:41:48,277] 41 root - INFO - Best parameters for AdaBoostRegressor: {'learning_rate': 0.2, 'n_estimators': 256}
+[2025-06-17 22:41:48,662] 48 root - INFO - AdaBoostRegressor: 0.8474809725542182
+[2025-06-17 22:42:26,285] 41 root - INFO - Best parameters for GradientBoostingRegressor: {'learning_rate': 0.05, 'max_depth': 3, 'n_estimators': 128, 'subsample': 0.8}
+[2025-06-17 22:42:26,388] 48 root - INFO - GradientBoostingRegressor: 0.8796481122983704

@@ -1,0 +1,8 @@
+[2025-06-18 10:53:21,890] 97 werkzeug - WARNING -  * Debugger is active!
+[2025-06-18 10:53:21,899] 97 werkzeug - INFO -  * Debugger PIN: 487-403-689
+[2025-06-18 10:53:25,453] 65 root - INFO - Object loaded from artifact/model.pkl
+[2025-06-18 10:53:25,497] 65 root - INFO - Object loaded from artifact/preprocessor.pkl
+[2025-06-18 10:53:25,508] 97 werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 10:53:25] "POST /predictdata HTTP/1.1" 200 -
+[2025-06-18 10:53:36,699] 65 root - INFO - Object loaded from artifact/model.pkl
+[2025-06-18 10:53:36,699] 65 root - INFO - Object loaded from artifact/preprocessor.pkl
+[2025-06-18 10:53:36,712] 97 werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 10:53:36] "POST /predictdata HTTP/1.1" 200 -

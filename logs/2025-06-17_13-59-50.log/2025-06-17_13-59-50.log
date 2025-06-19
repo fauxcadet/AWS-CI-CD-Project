@@ -1,0 +1,26 @@
+[2025-06-17 13:59:52,300] 24 root - INFO - Entered Data Ingestion Method
+[2025-06-17 13:59:52,302] 27 root - INFO - Read dataset as Data frame
+[2025-06-17 13:59:52,305] 33 root - INFO - Train test Split initiated
+[2025-06-17 13:59:52,309] 39 root - INFO - Ingestion of data is completed
+[2025-06-17 13:59:52,311] 64 root - INFO - Read train and test data completed Under Data Transformation
+[2025-06-17 13:59:52,311] 65 root - INFO - Obtaining preprocessing Object
+[2025-06-17 13:59:52,311] 41 root - INFO - Numerical columns scaling completed
+[2025-06-17 13:59:52,311] 42 root - INFO - Categorical columns encoding completed
+[2025-06-17 13:59:52,311] 50 root - INFO - Column transformer object created
+[2025-06-17 13:59:52,312] 79 root - INFO - Applying preprocessing object on training and testing datasets
+[2025-06-17 13:59:52,321] 87 root - INFO - Preprocessing completed
+[2025-06-17 13:59:52,329] 93 root - INFO - Saved preprocessing object
+[2025-06-17 13:59:52,332] 28 root - INFO - Object saved at artifact/preprocessor.pkl
+[2025-06-17 13:59:52,332] 33 root - INFO - Splitting training and testing data
+[2025-06-17 13:59:52,582] 42 root - INFO - RandomForestRegressor: 0.8524111666898625
+[2025-06-17 13:59:52,663] 42 root - INFO - AdaBoostRegressor: 0.8429082097027598
+[2025-06-17 13:59:52,750] 42 root - INFO - GradientBoostingRegressor: 0.8725102456515061
+[2025-06-17 13:59:53,267] 42 root - INFO - CatBoostRegressor: 0.8525105413948599
+[2025-06-17 13:59:53,423] 42 root - INFO - XGBRegressor: 0.8230898008444014
+[2025-06-17 13:59:53,437] 42 root - INFO - LinearRegression: 0.8777304327661603
+[2025-06-17 13:59:53,500] 42 root - INFO - KNeighborsRegressor: 0.4776040279709245
+[2025-06-17 13:59:53,505] 42 root - INFO - DecisionTreeRegressor: 0.7397656925499634
+[2025-06-17 13:59:53,505] 57 root - INFO - Evaluating models
+[2025-06-17 13:59:53,505] 65 root - INFO - Best model found: LinearRegression with score: 0.8777304327661603
+[2025-06-17 13:59:53,505] 68 root - INFO - Saving best model
+[2025-06-17 13:59:53,506] 28 root - INFO - Object saved at artifact/model.pkl

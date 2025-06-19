@@ -1,0 +1,10 @@
+[2025-06-18 10:40:13,812] 97 werkzeug - WARNING -  * Debugger is active!
+[2025-06-18 10:40:13,820] 97 werkzeug - INFO -  * Debugger PIN: 487-403-689
+[2025-06-18 10:40:16,255] 65 root - INFO - Object loaded from artifact/model.pkl
+[2025-06-18 10:40:16,411] 65 root - INFO - Object loaded from artifact/preprocessor.pkl
+[2025-06-18 10:40:16,427] 97 werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 10:40:16] "[35m[1mPOST /predictdata HTTP/1.1[0m" 500 -
+[2025-06-18 10:40:16,441] 97 werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 10:40:16] "[36mGET /predictdata?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+[2025-06-18 10:40:16,441] 97 werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 10:40:16] "[36mGET /predictdata?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+[2025-06-18 10:40:16,448] 97 werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 10:40:16] "GET /predictdata?__debugger__=yes&cmd=resource&f=console.png&s=mLAanwYrZhRY76Uytm3Z HTTP/1.1" 200 -
+[2025-06-18 10:40:16,460] 97 werkzeug - INFO - 127.0.0.1 - - [18/Jun/2025 10:40:16] "[36mGET /predictdata?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+[2025-06-18 10:42:39,664] 97 werkzeug - INFO -  * Detected change in '/Users/sourav/Desktop/ML-Project/src/pipeline/predict_pipeline.py', reloading

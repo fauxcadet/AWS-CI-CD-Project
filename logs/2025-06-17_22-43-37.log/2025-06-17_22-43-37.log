@@ -1,0 +1,34 @@
+[2025-06-17 22:43:39,730] 24 root - INFO - Entered Data Ingestion Method
+[2025-06-17 22:43:39,733] 27 root - INFO - Read dataset as Data frame
+[2025-06-17 22:43:39,736] 33 root - INFO - Train test Split initiated
+[2025-06-17 22:43:39,740] 39 root - INFO - Ingestion of data is completed
+[2025-06-17 22:43:39,742] 64 root - INFO - Read train and test data completed Under Data Transformation
+[2025-06-17 22:43:39,742] 65 root - INFO - Obtaining preprocessing Object
+[2025-06-17 22:43:39,742] 41 root - INFO - Numerical columns scaling completed
+[2025-06-17 22:43:39,742] 42 root - INFO - Categorical columns encoding completed
+[2025-06-17 22:43:39,742] 50 root - INFO - Column transformer object created
+[2025-06-17 22:43:39,743] 79 root - INFO - Applying preprocessing object on training and testing datasets
+[2025-06-17 22:43:39,752] 87 root - INFO - Preprocessing completed
+[2025-06-17 22:43:39,760] 93 root - INFO - Saved preprocessing object
+[2025-06-17 22:43:39,762] 28 root - INFO - Object saved at artifact/preprocessor.pkl
+[2025-06-17 22:43:39,762] 33 root - INFO - Splitting training and testing data
+[2025-06-17 22:43:44,703] 41 root - INFO - Best parameters for RandomForestRegressor: {'n_estimators': 64}
+[2025-06-17 22:43:44,861] 48 root - INFO - RandomForestRegressor: 0.846759799622067
+[2025-06-17 22:43:47,941] 41 root - INFO - Best parameters for AdaBoostRegressor: {'learning_rate': 0.2, 'n_estimators': 256}
+[2025-06-17 22:43:48,329] 48 root - INFO - AdaBoostRegressor: 0.8486950210064386
+[2025-06-17 22:44:23,832] 41 root - INFO - Best parameters for GradientBoostingRegressor: {'learning_rate': 0.05, 'max_depth': 3, 'n_estimators': 128, 'subsample': 0.75}
+[2025-06-17 22:44:23,933] 48 root - INFO - GradientBoostingRegressor: 0.8733071924323452
+[2025-06-17 22:45:10,096] 41 root - INFO - Best parameters for CatBoostRegressor: {'depth': 3, 'iterations': 200, 'learning_rate': 0.05}
+[2025-06-17 22:45:10,142] 48 root - INFO - CatBoostRegressor: 0.875940998283061
+[2025-06-17 22:45:11,019] 41 root - INFO - Best parameters for XGBRegressor: {'learning_rate': 0.05, 'n_estimators': 64}
+[2025-06-17 22:45:11,122] 48 root - INFO - XGBRegressor: 0.8492434722253639
+[2025-06-17 22:45:11,138] 41 root - INFO - Best parameters for LinearRegression: {}
+[2025-06-17 22:45:11,148] 48 root - INFO - LinearRegression: 0.8777304327661603
+[2025-06-17 22:45:11,439] 41 root - INFO - Best parameters for KNeighborsRegressor: {'n_neighbors': 13}
+[2025-06-17 22:45:11,788] 48 root - INFO - KNeighborsRegressor: 0.516578802078084
+[2025-06-17 22:45:11,879] 41 root - INFO - Best parameters for DecisionTreeRegressor: {'criterion': 'squared_error'}
+[2025-06-17 22:45:11,885] 48 root - INFO - DecisionTreeRegressor: 0.7478819619098342
+[2025-06-17 22:45:11,885] 94 root - INFO - Evaluating models
+[2025-06-17 22:45:11,885] 102 root - INFO - Best model found: LinearRegression with score: 0.8777304327661603
+[2025-06-17 22:45:11,885] 105 root - INFO - Saving best model
+[2025-06-17 22:45:11,887] 28 root - INFO - Object saved at artifact/model.pkl
